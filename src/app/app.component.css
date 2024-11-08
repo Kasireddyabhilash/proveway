@@ -1,0 +1,45 @@
+.offer-container {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .offer-header {
+    color: #FF6B82;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .offer-card {
+    border: 1px solid #FF6B82;
+    margin-bottom: 20px;
+  
+    .card-header {
+      background-color: #FF6B82;
+      color: white;
+      font-weight: bold;
+    }
+  
+    .discount {
+      color: #FF6B82;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+  
+  .popular {
+    border: 2px solid #FF6B82;
+  }
+  
+  .free-delivery {
+    color: #FF6B82;
+    font-weight: bold;
+  }
+  
+  .btn-add-cart {
+    background-color: #FF6B82;
+    color: white;
+    font-weight: bold;
+  }
+  
