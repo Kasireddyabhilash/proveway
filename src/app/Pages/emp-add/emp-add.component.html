@@ -1,0 +1,77 @@
+<mat-toolbar color="primary">
+  <span>Employee Management</span>
+  <span class="example-spacer"></span>
+<button mat-raised-button (click)="openAddEmpForm()">
+  ADD EMPLOYEE
+</button>
+</mat-toolbar>
+<div class="main-body">
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter()" placeholder="Ex. Mia" #input>
+  </mat-form-field>
+  
+  <div class="table-container">
+    <table mat-table  matSort [dataSource]="dataSource">
+  
+      <!-- ID Column -->
+      <ng-container matColumnDef="id">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> ID </th>
+        <td mat-cell *matCellDef="let row"> {{row.id}} </td>
+      </ng-container>
+  
+      <!-- Progress Column -->
+      <ng-container matColumnDef="FirstName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> FirstName</th>
+        <td mat-cell *matCellDef="let row"> {{row.firstName}} </td>
+      </ng-container>
+       <!-- Name Column -->
+       <ng-container matColumnDef="LastName">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> LastName</th>
+        <td mat-cell *matCellDef="let row"> {{row.lastName}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Email">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Email</th>
+        <td mat-cell *matCellDef="let row"> {{row.email}} </td>
+      </ng-container>
+      <ng-container matColumnDef="DOB">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> DOB</th>
+        <td mat-cell *matCellDef="let row"> {{row.dob}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Gender">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Gender</th>
+        <td mat-cell *matCellDef="let row"> {{row.gender}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Education">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Education</th>
+        <td mat-cell *matCellDef="let row"> {{row.education}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Company">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Company</th>
+        <td mat-cell *matCellDef="let row"> {{row.company}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Experience">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Experience</th>
+        <td mat-cell *matCellDef="let row"> {{row.experience}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Package">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Package</th>
+        <td mat-cell *matCellDef="let row"> {{row.Package }}lpa </td>
+      </ng-container>
+      <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Action</th>
+        <td mat-cell *matCellDef="let row">
+          <button mat-icon-button color="primary" (click)="openEditForm(row)">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="deleteEployee(row._id)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" aria-label="Select page of users"></mat-paginator>
+
+</div>

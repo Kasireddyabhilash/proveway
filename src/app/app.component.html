@@ -1,80 +1,40 @@
-<div class="offer-container">
-  <h2 class="offer-header">Bundle & Save</h2>
+<div class="dashboard-container">
+    <mat-toolbar color="primary" class="toolbar">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>KA</span>
+    </mat-toolbar>
+  
+    <mat-sidenav-container class="sidenav-container">
+      <mat-sidenav #sidenav mode="side" [(opened)]="isExpanded">
+        <mat-nav-list>
+          <mat-list-item>
+            <a [routerLink]="['/login']">Login</a>
+          </mat-list-item>
+          <mat-list-item>
+            <a [routerLink]="['/register']">Register</a>
+          </mat-list-item>
+          <mat-list-item>
+            <a [routerLink]="['/add']">Employee</a>
+          </mat-list-item>
+          <!-- <mat-list-item>
+            <a [routerLink]="['/edit']">Employee edit</a>
 
-  <!-- 1 Pair Offer -->
-  <div class="card offer-card">
-      <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-              <div>
-                  <input type="radio" name="Pair" id="Pair1" (change)="selectOffer(1, 195)">
-                  <label for="Pair1">1 Pair</label>
-                  <span class="discount ml-2">10% Off</span>
-                  <p>DKK 195.00</p>
-              </div>
-              <div>
-                  <p>50% OFF</p>
-              </div>
-          </div>
-      </div>
-  </div>
+          </mat-list-item> -->
+          
+         
+        </mat-nav-list>
 
-  <!-- 2 Pair Offer -->
-  <div class="card offer-card popular">
-      <div class="card-header text-center">MOST POPULAR</div>
-      <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-              <div>
-                  <input type="radio" name="Pair" id="Pair2" (change)="selectOffer(2, 345)">
-                  <label for="Pair2">2 Pair</label>
-                  <span class="discount ml-2">DKK 345.00</span>
-              </div>
-              <div>
-                  <b>MOST POPULAR</b>
-                  <p class="text-muted">40%</p>
-              </div>
-          </div>
-          <!-- Expanded content for 2 Pair offer -->
-          <div *ngIf="selectedOfferId === 2" class="row mt-3">
-              <div class="col">
-                  <label>#1 Size</label>
-                  <select class="form-control">
-                      <option>S</option>
-                      <option>M</option>
-                      <option>L</option>
-                  </select>
-              </div>
-              <div class="col">
-                  <label>#2 Color</label>
-                  <select class="form-control">
-                      <option>Black</option>
-                      <option>White</option>
-                      <option>Red</option>
-                  </select>
-              </div>
-          </div>
-      </div>
-  </div>
 
-  <!-- 3 Pair Offer -->
-  <div class="card offer-card">
-      <div class="card-body">
-          <div class="d-flex justify-content-between align-items-center">
-              <div>
-                  <input type="radio" name="Pair" id="Pair3" (change)="selectOffer(3, 528)">
-                  <label for="Pair3">3 Pair</label>
-                  <span class="discount ml-2">DKK 528.00</span>
-              </div>
-              <div>
-                  <p>60%</p>
-              </div>
-          </div>
-      </div>
+      </mat-sidenav>
+      <router-outlet></router-outlet>
+    
+  
+ 
+    </mat-sidenav-container>
+    
   </div>
-
-  <!-- Total and Add to Cart Button -->
-  <div class="text-center mt-4">
-      <p class="free-delivery">Free 2-Day Shipping</p>
-      <p>Total: {{ getFormattedPrice() }}</p>
-      <button class="btn btn-add-cart btn-block">+ Add to Cart</button>
-  </div>
-</div>
+  
+  
+  

@@ -1,45 +1,52 @@
-.offer-container {
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .offer-header {
-    color: #FF6B82;
-    font-weight: bold;
-    margin-bottom: 20px;
-  }
-  
-  .offer-card {
-    border: 1px solid #FF6B82;
-    margin-bottom: 20px;
-  
-    .card-header {
-      background-color: #FF6B82;
-      color: white;
-      font-weight: bold;
-    }
-  
-    .discount {
-      color: #FF6B82;
-      font-size: 12px;
-      font-weight: bold;
-    }
-  }
-  
-  .popular {
-    border: 2px solid #FF6B82;
-  }
-  
-  .free-delivery {
-    color: #FF6B82;
-    font-weight: bold;
-  }
-  
-  .btn-add-cart {
-    background-color: #FF6B82;
-    color: white;
-    font-weight: bold;
-  }
-  
+/* .dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+} */
+
+/* .toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+} */
+
+/* .sidenav-container {
+  flex: 1;
+  display: flex;
+  height: calc(100vh - 64px);
+} */
+
+mat-sidenav {
+  width: 250px;
+}
+
+mat-nav-list a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  text-decoration: none;
+  color: inherit;
+}
+
+mat-nav-list a:hover {
+  background-color: #f4f4f4;
+}
+
+.card {
+  width: 300px;
+  margin: 20px;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+  padding: 16px;
+}
+
+.card-icon {
+  font-size: 36px;
+  margin-right: 10px;
+  color: #3f51b5;
+}

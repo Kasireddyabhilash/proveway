@@ -1,0 +1,67 @@
+<div matDialogTitle>
+  <h1>Employee Form</h1>
+</div>
+<form [formGroup]="empForm"(ngSubmit)="onFormSubmit()">
+<div matDialogContent class="content">
+<div class="row">
+  <mat-form-field appearance="outline">
+      <mat-label>FirstName</mat-label>
+      <input matInput type="text"  placeholder="test"   formControlName="firstName">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>LastName</mat-label>
+      <input matInput type="text" placeholder="test" formControlName="lastName">
+  </mat-form-field>
+</div>
+<div class="row">
+  <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput  type="email" placeholder="test@gmail.com" formControlName="email">
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>DOB</mat-label>
+      <input matInput type="text" placeholder="test" formControlName="dob">
+  </mat-form-field>
+</div>
+<div class="row">
+  <mat-radio-group aria-label="Select an option" formControlName="gender">
+      <mat-label><b>Gender</b></mat-label>
+      <mat-radio-button value="male">Male</mat-radio-button>
+      <mat-radio-button value="female">Female</mat-radio-button>
+      <mat-radio-button value="others">Others</mat-radio-button>
+    </mat-radio-group>
+</div>
+<div class="row">
+  <mat-form-field appearance="outline">
+      <mat-label>Qualification</mat-label>
+      <mat-select formControlName="education">
+        <mat-option *ngFor="let val of education"[value]="val">
+          {{val}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Company</mat-label>
+      <input matInput type="text" placeholder="test" formControlName="company">
+  </mat-form-field>
+</div>
+<div class="row">
+  <mat-form-field appearance="outline">
+      <mat-label>Experience</mat-label>
+      <input matInput type="number" placeholder="test" formControlName="experience">
+  </mat-form-field>
+  <mat-form-field appearance="outline">
+      <mat-label>Package</mat-label>
+      <input matInput type="number" placeholder="test" formControlName="package">
+      <mat-hint>In Rupees</mat-hint>
+  </mat-form-field>
+
+</div>
+</div>
+<div mat-dialog-actions class="action">
+  <button class="btn btn-outline-warning" type="button" [mat-dialog-close]="false">Save as Draft</button>
+  &nbsp;&nbsp;
+  <button class="btn btn-outline-warning">Save as Review <span class="bi bi-arrow-right"></span> </button>
+</div>
+
+</form>
