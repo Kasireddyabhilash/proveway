@@ -75,8 +75,6 @@ export class EmpAddComponent implements OnInit {
     });
   }
   getEmployeeList() {
-
-
     this._empService.getEmployeeList().subscribe({
       next: (res) => {
         this.dataSource = res;
