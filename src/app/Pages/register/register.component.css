@@ -1,0 +1,20 @@
+/* Apply background image */
+.register-container {
+    min-height: 100vh;
+    background-image: url('../assets/abstract-digital-grid-black-background.jpg'); /* Replace with your image path */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Style the card */
+  .card {
+    width: 100%;
+    max-width: 500px;
+    background: rgba(255, 255, 255, 0.9); /* Add slight transparency for better readability */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  

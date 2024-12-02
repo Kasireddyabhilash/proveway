@@ -1,8 +1,12 @@
 
 /* Center the card vertically and horizontally */
-body, html {
-    height: 100%;
-  }
+body {
+  background-image: url('../assets/abstract-digital-grid-black-background.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin: 0;
+}
   
   .login-container {
     display: flex;
@@ -15,6 +19,17 @@ body, html {
   .login-card {
     animation: fadeIn 0.8s ease-in-out;
   }
+  .forgot-password-link {
+    color: #007bff;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+  }
+  
+  .forgot-password-link:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
   
   @keyframes fadeIn {
     0% {
@@ -25,4 +40,6 @@ body, html {
       transform: scale(1);
       opacity: 1;
     }
+   
+    
   }
