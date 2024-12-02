@@ -1,0 +1,42 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/abstract-digital-grid-black-background.jpg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #df4d4d;
+  }
+    
+
+  
+  body-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  
+  .mat-card {
+    margin: 16px;
+    border-radius: 8px;
+  }
+  
+  .bg-primary {
+    background-color: #007bff;
+  }
+  
+  .bg-success {
+    background-color: #28a745;
+  }
+  
+  .bg-warning {
+    background-color: #ffc107;
+  }
+  
+  .text-white {
+    color: #fff;
+  }
+  

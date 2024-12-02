@@ -1,4 +1,5 @@
 .logout-container {
+  background-image: url('../assets/abstract-digital-grid-black-background.jpg');
     height: 100vh;
     display: flex;
     justify-content: center;

@@ -35,7 +35,7 @@ export class LoginComponent {
       if(res.message ==="Login successful"){
         alert('success');
          localStorage.setItem("leaveuser",JSON.stringify(res.data));
-         this.router.navigateByUrl("dashboard")
+         this.router.navigateByUrl("dash")
        
       }else
       alert('checklogin credentials')
