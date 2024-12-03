@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { EmployeeService } from '../../Core/employee.service';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
-import { MatSort, MatSortModule } from '@angular/material/sort';
+import { MatSort } from '@angular/material/sort';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -27,8 +27,7 @@ import { CommonModule } from '@angular/common';
     //MatTableModule,
     MatPaginator,
     CommonModule,
-    MatTableModule,
-    MatTableModule, MatSortModule
+    MatTableModule
   ],
   templateUrl: './emp-add.component.html',
   styleUrls: ['./emp-add.component.css'],
@@ -36,6 +35,7 @@ import { CommonModule } from '@angular/common';
 export class EmpAddComponent implements OnInit {
   title = 'crud-app';
   displayedColumns: string[] = [
+    'id',
     'FirstName',
     'LastName',
     'Email',
@@ -45,7 +45,7 @@ export class EmpAddComponent implements OnInit {
     'Company',
     'Experience',
     'Package',
-    'Action',
+    'action',
   ];
   dataSource: any;
   constructor(

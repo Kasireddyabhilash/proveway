@@ -36,9 +36,9 @@ import { MatSortModule } from '@angular/material/sort';
     CommonModule,
     MatDialogModule,
     //MatTableDataSource,
-   MatTable,
+  MatTable,
    CommonModule,
-   MatTableModule, MatSortModule
+
   ],
   templateUrl: './emp-add-edit.component.html',
   styleUrls: ['./emp-add-edit.component.css']
