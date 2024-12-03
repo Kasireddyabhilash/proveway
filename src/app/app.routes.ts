@@ -13,11 +13,11 @@ import { authGuard } from './Guards/auth.guard';
 export const routes: Routes = [
     {path:'login',component:LoginComponent},
     {path:'register',component:RegisterComponent},
-    {path:'add',component:EmpAddComponent,},
-    {path:'edit',component:EmpAddEditComponent,canActivate:[authGuard]},
-    {path:'dashboard',component:AppComponent,canActivate:[authGuard]},
-    {path:'logout',component:LogoutComponent,canActivate:[authGuard]},
-    {path:'dash',component:DashboardComponent,canActivate:[authGuard]},
+    {path:'add',component:EmpAddComponent},
+    {path:'edit',component:EmpAddEditComponent},
+    {path:'dashboard',component:AppComponent},
+    {path:'logout',component:LogoutComponent},
+    {path:'dash',component:DashboardComponent},
 
     { path: 'forgot-password', component: ForgotPasswordComponent },
     { path: '**', redirectTo: 'login' }

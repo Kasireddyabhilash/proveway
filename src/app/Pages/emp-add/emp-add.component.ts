@@ -36,7 +36,6 @@ import { CommonModule } from '@angular/common';
 export class EmpAddComponent implements OnInit {
   title = 'crud-app';
   displayedColumns: string[] = [
-    'id',
     'FirstName',
     'LastName',
     'Email',
@@ -46,7 +45,7 @@ export class EmpAddComponent implements OnInit {
     'Company',
     'Experience',
     'Package',
-    'action',
+    'Action',
   ];
   dataSource: any;
   constructor(
