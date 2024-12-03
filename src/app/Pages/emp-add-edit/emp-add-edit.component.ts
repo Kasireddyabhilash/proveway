@@ -12,7 +12,9 @@ import {MatSelectModule} from '@angular/material/select';
 import { CommonModule } from '@angular/common';
 import { MAT_DIALOG_DATA, MatDialogModule, MatDialogRef } from '@angular/material/dialog';
 import { EmployeeService } from '../../Core/employee.service';
-import { MatTable, MatTableDataSource } from '@angular/material/table';
+import { MatTable, MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSortModule } from '@angular/material/sort';
 
 
 
@@ -35,7 +37,8 @@ import { MatTable, MatTableDataSource } from '@angular/material/table';
     MatDialogModule,
     //MatTableDataSource,
    MatTable,
-   CommonModule
+   CommonModule,
+   MatTableModule, MatSortModule
   ],
   templateUrl: './emp-add-edit.component.html',
   styleUrls: ['./emp-add-edit.component.css']
@@ -71,6 +74,7 @@ export class EmpAddEditComponent implements OnInit {
     //   });
     // }
       this.empForm = this._fb.group({
+        
         firstName: ['', Validators.required], // Required field
         lastName: ['', Validators.required], // Required field
         email: ['', [Validators.required, Validators.email]], // Required and must be a valid email

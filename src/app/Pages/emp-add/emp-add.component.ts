@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { EmployeeService } from '../../Core/employee.service';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
-import { MatSort } from '@angular/material/sort';
+import { MatSort, MatSortModule } from '@angular/material/sort';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -27,7 +27,8 @@ import { CommonModule } from '@angular/common';
     //MatTableModule,
     MatPaginator,
     CommonModule,
-    MatTableModule
+    MatTableModule,
+    MatTableModule, MatSortModule
   ],
   templateUrl: './emp-add.component.html',
   styleUrls: ['./emp-add.component.css'],
